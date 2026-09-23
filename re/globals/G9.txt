@@ -1,0 +1,70 @@
+# G9 globals.  Format: ADDR  kind  meaning
+# ---------------- DGROUP (DS16/DS8/DSPTR) ----------------
+0x17e2  u16      flag, cleared to 0 by the full-screen dissolves sub_0dc5_017d/01c5 (set to 1 elsewhere = "screen needs full redraw/fade")
+0x2844  u16      near DGROUP offset of CURRENT polygon vertex list (sub_0d84_*), initially 0x284c
+0x2846  u16      near offset of SPARE vertex list (clip output), initially 0x29dc; swapped with 0x2844 after each clip pass
+0x2848  u16      near offset of edge table currently being written (toggles at ymin/ymax vertices), initially 0x2b6c
+0x284a  u16      near offset of the other edge table (= spare vertex list reused)
+0x284c  i16[200] polygon vertex buffer A (100 x,y pairs, list closed by repeating vertex 0)
+0x29dc  i16[200] polygon vertex buffer B / 2nd edge table (x per row, indexed y*2)
+0x2b6c  i16[200] polygon edge table 1 (x per row y, indexed y*2)
+0x2cfc  u16      polygon: original vertex count (written only)
+0x2cfe  u16      polygon: loop counter / edge count of current list
+0x2d00  u16      polygon: vertex count of current list (clip output count)
+0x2d02  u16      polygon: 1 = polygon was clipped (recompute ymin/ymax)
+0x2d04  u16      polygon: max x of input polygon (i16)
+0x2d06  u16      dashed line (0dc5_058d): outcode bit currently clipped (8,4,2,1)
+0x2d08  u16      dashed line: outcode of new clipped point
+0x2d0a  i16      dashed line: clipped x
+0x2d0c  i16      dashed line: clipped y
+0x2d1a  u16      PRNG state low word (init 0x349a)
+0x2d1c  u16      PRNG state high word (init 0xacdc)
+0x2d1e  char[14] itoa output buffer of sub_0f3a_0004 (initial text "place de atoi")
+0x2d2c  char[11] "*Overflow*" (only used by dead long->string routine 0f3a:0052)
+0x2d38  farptr   DSPTR: current draw buffer (320x200 8bpp); sometimes temporarily = screen
+0x2d3a  u16      segment half of 0x2d38 - dissolves use it as "segment, offset 0" => use DSPTR(0x2d38)
+0x2d3c  farptr   DSPTR: the screen (VGA A000:0000) => platform framebuffer (64000 bytes)
+0x2d3e  u16      segment half of 0x2d3c (0xa000) - dissolves use it => use DSPTR(0x2d3c)
+0x2d66  u16      frame counter, ++ by sub_0dc5_0148 on each present (read/reset by timing code elsewhere)
+0x2d84  u16      solid line (1040_0006): outcode bit being clipped
+0x2d86  u16      solid line: outcode of new point
+0x2d88  i16      solid line: clipped x
+0x2d8a  i16      solid line: clipped y
+0x2d8c  i16[256] sine table, amplitude 16383 (sin(a*2pi/256)); cos = entry (a+64)&255  (sub_106a_0593)
+0x303c  u16      first row of the play view (0); rows [0x303c]..171 used by scroll/restore routines
+0x3040  u8       hour   (sub_0dc5_0780)
+0x3048  u8       second (sub_0dc5_0780)
+0x3054  u16      end row (exclusive) of the play view (0xac = 172)
+0x3056  farptr   DSPTR: background buffer (320x200): clean scene / scroll source / sky gradient target
+0x305e  u8       minute (sub_0dc5_0780)
+# ---------------- SS-relative (SS16/SSU16) ----------------
+SS:0x000 u16[200] row offset table: SSU16(y*2) = y*320 (also abused as multiplier: SSU16(k*2) = k*320)
+SS:0x192 i16     clip ymin (inclusive)  -- NOTE: PORTING.md says xmin; verified: set by sub_0fe6_01bf(ymin,ymax)
+SS:0x194 i16     clip ymax (inclusive)
+SS:0x196 i16     clip xmin (inclusive)  -- set by sub_0fe6_01ac(xmin,xmax)
+SS:0x198 i16     clip xmax (inclusive)
+# ---------------- code-segment statics (become `static` C variables) ----------------
+0d84:0062 i16  SMC imm: polygon x offset (dx arg)        0d84:006f i16 SMC imm: polygon y offset (dy arg)
+0d84:018e i16  SMC imm: polygon ymin                    0d84:0194 i16 SMC imm: polygon ymax
+0d84:01a5 u16  SMC imm: current edge table offset (== DS16(0x2848))   0d84:0215 u16 SMC imm: fill color (al=ah=color)
+0fe6:000a u8[400] scratch row buffer (row decode for clipped draw; mirror uses it backwards ending at 0x198)
+0fe6:019a u16 id/flags   0fe6:019c i16 x   0fe6:019e i16 top y (y-h+1)   0fe6:01a0 u16 dst segment
+0fe6:01a2 i16 visible width   0fe6:01a4 i16 left clip count   0fe6:01a6 u16 dst row ptr   0fe6:01a8 u16 src ptr   0fe6:01aa u16 "h-clipped" flag
+106a:0004 i16 / 0006 i16  rotation temps vx, vy
+106a:0008 u16 colB (prim byte 3: fill/line color, sprite/subshape id high byte)
+106a:000a u16 colA (prim byte 2: outline color (0xff=none), sprite/subshape id low byte)
+106a:000c u8  decode-flag state of 0477 (0x10 byte coords,0x80 neg x,0x20 neg y); ALSO read by prim handlers 080d/084a
+106a:000d u8  decode-flag state of 04ff (also updated by 0593)
+106a:000f u16[8] near table of primitive handlers: 080d,084a,08a8,08a8,0734,0774,07b8,07e3
+106a:001f i16[500] transformed vertex buffer (250 x,y pairs)
+106a:04d4/04d6/04dc/04de, 0559/055b/0568/056a  SMC patch sites (lodsw<->lodsb;cbw, nop<->neg ax) -> replaced by the flag states above
+106a:062f/065d cos, 0640/066a sin, 0655 X, 067c Y  SMC imms of sub_106a_0593 -> locals
+10f5:0006 u16 fill color of sub_10f5_0028 (use a local)
+1100:000a u8  current point color (sub_1100_00c0 / 000b / 0096) -> static
+1110:000c u8[320] scratch row;  014c out ptr; 014e src ptr; 0150 u8 width/16; 0151 u16 level; 0153 u16 new width px; 0155 u8 rows out;
+          0156 u16 row mask; 0158 u16 copied flag word; 015a u16[15] jump table (column pickers); 0178 u16[15] row masks
+          (0200 0202 0842 2222 4892 9254 cc54 aaaa aada d6da 6eee eeee feee fefe feff); 0196 u16[16] 1<<i; 01b6/01b8/01ba segs
+1172:0002 u8[8] bit masks 80 40 20 10 08 04 02 01; 000a u16 bitmap base (font+8); 000c farptr glyph table (font+tbl-2*first)
+1172:0010 i16 pen x (advanced per glyph); 007d SMC pen y; 008c SMC u8 glyph height; 0094 SMC x of glyph; 0097 SMC u8 first bit mask
+1172:00a5 SMC u8 text color; 00b4 SMC u16 bitmap stride; 00c3 imm const 1 (char spacing); 00d3 imm const 2 (space width)
+1172:00d7 farptr current font; 00db u16 color word (stored only)

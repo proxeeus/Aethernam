@@ -1,0 +1,568 @@
+sub_0000_0000 near int() callers=0 argbytes={}
+sub_0000_010d near int() callers=2 argbytes={0: 1, 2: 1}
+sub_0000_012f near int() callers=1 argbytes={0: 1}
+sub_0000_0172 far int() callers=1 argbytes={0: 1}
+sub_0000_01a7 near int() callers=1 argbytes={0: 1}
+sub_0000_01af near int() callers=0 argbytes={}
+sub_0000_01d0 near long() callers=1 argbytes={0: 1}
+sub_0000_025e near int() callers=2 argbytes={0: 2}
+sub_0000_02ce far long() callers=1 argbytes={0: 1}
+sub_0000_0312 far int() callers=6 argbytes={0: 6}
+sub_0000_0395 far long() callers=22 argbytes={0: 22}
+sub_0000_03c2 near long() callers=2 argbytes={0: 2}
+sub_0000_03f0 far int() callers=8 argbytes={0: 8}
+sub_0000_0411 far long() callers=2 argbytes={0: 2}
+sub_0000_042a near long() callers=9 argbytes={0: 9}
+sub_0000_0433 far long() callers=5 argbytes={0: 5}
+sub_0000_04cd far long() callers=3 argbytes={0: 3}
+sub_0000_04ec far int() callers=4 argbytes={0: 4}
+sub_0000_050b far long() callers=2 argbytes={0: 2}
+sub_0053_0000 far int() callers=2 argbytes={0: 2}
+sub_0053_0016 far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0053_003c far int(w,w) callers=1 argbytes={4: 1}
+sub_0053_007e far int(w,w) callers=2 argbytes={4: 2}
+sub_0053_0112 far int() callers=8 argbytes={0: 8}
+sub_0053_0168 far int(w,w) callers=2 argbytes={4: 2}
+sub_0053_01e8 far int(ptr) callers=1 argbytes={4: 1}
+sub_0053_028e far long() callers=8 argbytes={0: 8}
+sub_0053_030c far int(w,w) callers=2 argbytes={4: 2}
+sub_0053_036c far int() callers=2 argbytes={0: 2}
+sub_0053_03a5 far long(w,w) callers=2 argbytes={4: 2}
+sub_0053_0413 far long(w,w,w) callers=6 argbytes={6: 6}
+sub_0053_0483 far long(w,w) callers=3 argbytes={4: 3}
+sub_0053_052f far long(w,w,w) callers=6 argbytes={0: 1, 6: 5}
+sub_0053_0564 far long(w,w,w,w) callers=7 argbytes={8: 6, 0: 1}
+sub_0053_05cd far int() callers=3 argbytes={0: 3}
+sub_0053_05f6 far int(w,w) callers=31 argbytes={4: 27, 0: 4}
+sub_0053_0612 far int() callers=1 argbytes={0: 1}
+sub_0053_075b far int(w,w) callers=2 argbytes={4: 2}
+sub_0053_07ea far int() callers=2 argbytes={0: 2}
+sub_0053_086b far int() callers=1 argbytes={0: 1}
+sub_0053_0895 far int(ptr,w,w) callers=1 argbytes={0: 1}
+sub_0053_08f0 far long(w,w,w,w,w) callers=2 argbytes={10: 2}
+sub_0053_0925 far int(w,w) callers=2 argbytes={4: 2}
+sub_0053_097e far int() callers=3 argbytes={0: 3}
+sub_0053_0994 far long(w,w) callers=3 argbytes={4: 3}
+sub_0053_09a7 far int(w,w) callers=3 argbytes={4: 2, 0: 1}
+sub_0053_0a6d far int() callers=1 argbytes={0: 1}
+sub_0053_0b7f far int(w,w) callers=5 argbytes={4: 5}
+sub_0053_0b9b far int() callers=1 argbytes={0: 1}
+sub_0053_0be7 far long() callers=1 argbytes={0: 1}
+sub_0053_0cc4 far int() callers=2 argbytes={0: 2}
+sub_0053_0cdd far long(w,w) callers=16 argbytes={4: 16}
+sub_0053_0cf2 far int(ptr,w) callers=11 argbytes={6: 11}
+sub_0053_0d68 far int(w,w,w,w) callers=3 argbytes={8: 3}
+sub_0053_0e27 far int(ptr,w) callers=5 argbytes={6: 5}
+sub_0053_0e52 far int(ptr,w) callers=6 argbytes={6: 5, 0: 1}
+sub_0053_0e77 far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0053_0ed4 far int(ptr) callers=2 argbytes={4: 2}
+sub_0053_0f89 far int(ptr) callers=4 argbytes={4: 3, 0: 1}
+sub_0053_0fa3 far int() callers=1 argbytes={0: 1}
+sub_0053_1074 far int(ptr) callers=3 argbytes={4: 3}
+sub_0053_1192 far int() callers=1 argbytes={0: 1}
+sub_0053_11d5 far int(w,w) callers=1 argbytes={4: 1}
+sub_0053_1298 far int(ptr) callers=1 argbytes={4: 1}
+sub_0053_13cf far int(w,ptr,ptr,ptr,ptr) callers=3 argbytes={18: 3}
+sub_0053_1479 far int() callers=2 argbytes={0: 2}
+sub_0053_1568 far int() callers=1 argbytes={0: 1}
+sub_0053_1591 far int(ptr,ptr,ptr) callers=1 argbytes={12: 1}
+sub_0053_1678 far int(w,ptr,ptr) callers=1 argbytes={10: 1}
+sub_0053_16fa far int(w,w) callers=1 argbytes={4: 1}
+sub_0053_1831 far int(w,w) callers=1 argbytes={4: 1}
+sub_0053_188d far int(w,w) callers=1 argbytes={4: 1}
+sub_0053_18f4 far int(w,ptr) callers=1 argbytes={0: 1}
+sub_0053_19c1 far int(w,ptr) callers=1 argbytes={0: 1}
+sub_0053_1a64 far int(w,ptr) callers=1 argbytes={6: 1}
+sub_0053_1adf far int(ptr,w,w) callers=1 argbytes={8: 1}
+sub_0053_1b98 far int() callers=1 argbytes={0: 1}
+sub_0053_1c18 far int(w,w,w) callers=2 argbytes={6: 2}
+sub_0053_1c4e far int() callers=2 argbytes={0: 2}
+sub_0053_1c94 far int(w,w) callers=1 argbytes={4: 1}
+sub_0053_1cb8 far int() callers=2 argbytes={0: 2}
+sub_0053_1cf8 far int() callers=2 argbytes={0: 2}
+sub_0053_1daa far int() callers=1 argbytes={0: 1}
+sub_0053_1deb far int() callers=1 argbytes={0: 1}
+sub_0053_1e2e far int() callers=2 argbytes={0: 2}
+sub_0053_1e8e far int() callers=1 argbytes={0: 1}
+sub_0053_1f21 far int() callers=1 argbytes={0: 1}
+sub_0053_1f74 far int(w,w) callers=2 argbytes={4: 2}
+sub_0053_2014 far int() callers=1 argbytes={0: 1}
+sub_026c_0006 far int() callers=2 argbytes={0: 2}
+sub_026c_0032 far int() callers=1 argbytes={0: 1}
+sub_026c_0067 far int(w,w) callers=1 argbytes={4: 1}
+sub_026c_010d far int(w,w,w) callers=1 argbytes={6: 1}
+sub_026c_0237 far int() callers=1 argbytes={0: 1}
+sub_026c_034a far int() callers=1 argbytes={0: 1}
+sub_026c_038b far int() callers=1 argbytes={0: 1}
+sub_02a7_0006 far int(w,w) callers=5 argbytes={4: 5}
+sub_02a7_001d far int(w,w,w,w,w) callers=2 argbytes={10: 2}
+sub_02a7_0098 far int() callers=1 argbytes={0: 1}
+sub_02a7_0181 far int() callers=1 argbytes={0: 1}
+sub_02a7_01e8 far int() callers=1 argbytes={0: 1}
+sub_02a7_02a9 far int() callers=1 argbytes={0: 1}
+sub_02a7_0319 far int(ptr,w,w) callers=1 argbytes={8: 1}
+sub_02a7_0351 far int(ptr) callers=1 argbytes={4: 1}
+sub_02a7_0410 far int() callers=1 argbytes={0: 1}
+sub_02a7_04f1 far int() callers=1 argbytes={0: 1}
+sub_02a7_07c8 far int(w,w,w) callers=2 argbytes={6: 2}
+sub_02a7_0863 far int() callers=2 argbytes={0: 2}
+sub_02a7_08f3 far int() callers=2 argbytes={0: 2}
+sub_02a7_0920 far long() callers=2 argbytes={0: 2}
+sub_02a7_09d0 far int() callers=3 argbytes={0: 3}
+sub_02a7_09fe far int() callers=2 argbytes={0: 2}
+sub_02a7_0a2d far int() callers=1 argbytes={0: 1}
+sub_02a7_0a5f far int() callers=1 argbytes={0: 1}
+sub_02a7_0a6a far int() callers=1 argbytes={0: 1}
+sub_02a7_0a75 far int() callers=1 argbytes={0: 1}
+sub_02a7_0b4a far int(w,w,w,w) callers=12 argbytes={8: 12}
+sub_02a7_0b83 far int() callers=1 argbytes={0: 1}
+sub_02a7_0bb5 far int() callers=1 argbytes={0: 1}
+sub_02a7_0c92 far int() callers=2 argbytes={0: 2}
+sub_02a7_0d09 far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_02a7_0d46 far int(ptr,w,w) callers=3 argbytes={8: 3}
+sub_02a7_0e21 far int() callers=2 argbytes={0: 2}
+sub_02a7_0f54 far int() callers=1 argbytes={0: 1}
+sub_02a7_0f92 far int() callers=0 argbytes={}
+sub_02a7_1038 far int() callers=0 argbytes={}
+sub_02a7_103f far int() callers=0 argbytes={}
+sub_02a7_1044 far int() callers=0 argbytes={}
+sub_02a7_1066 far int() callers=0 argbytes={}
+sub_02a7_108d far int() callers=0 argbytes={}
+sub_02a7_1093 far int() callers=3 argbytes={0: 3}
+sub_02a7_10df far int() callers=1 argbytes={0: 1}
+sub_02a7_10e6 far int(w,w) callers=2 argbytes={4: 2}
+sub_02a7_11ed far int() callers=1 argbytes={0: 1}
+sub_02a7_1264 far int() callers=4 argbytes={0: 4}
+sub_02a7_127c far int() callers=2 argbytes={0: 2}
+sub_03dd_0008 far int(w,w,w,w,w,w,w) callers=2 argbytes={0: 1, 14: 1}
+sub_03dd_00ac far long(w,w) callers=20 argbytes={4: 20}
+sub_03dd_00bc far int(w,w) callers=3 argbytes={4: 3}
+sub_03dd_011f far long() callers=9 argbytes={0: 9}
+sub_03dd_014c far int() callers=2 argbytes={0: 2}
+sub_03dd_017d far int() callers=1 argbytes={0: 1}
+sub_03dd_01c8 far int() callers=3 argbytes={0: 3}
+sub_03dd_01fb far int() callers=84 argbytes={0: 84}
+sub_03dd_0213 far int() callers=22 argbytes={0: 22}
+sub_03dd_022f far int() callers=8 argbytes={0: 8}
+sub_03dd_024e far int() callers=77 argbytes={0: 77}
+sub_03dd_0257 far int() callers=6 argbytes={0: 6}
+sub_03dd_026b far int(w,w,w) callers=1 argbytes={6: 1}
+sub_03dd_02f0 far long(w,w) callers=6 argbytes={4: 6}
+sub_03dd_034c far int() callers=6 argbytes={0: 6}
+sub_03dd_035b far int() callers=2 argbytes={0: 2}
+sub_03dd_0380 far int() callers=1 argbytes={0: 1}
+sub_03dd_03da far int() callers=6 argbytes={0: 6}
+sub_03dd_0407 far int() callers=0 argbytes={}
+sub_03dd_040e far int() callers=0 argbytes={}
+sub_03dd_0420 far int() callers=0 argbytes={}
+sub_03dd_0427 far int() callers=0 argbytes={}
+sub_03dd_0443 far int() callers=0 argbytes={}
+sub_03dd_044a far int() callers=0 argbytes={}
+sub_03dd_0471 far int() callers=0 argbytes={}
+sub_03dd_04a3 far int() callers=0 argbytes={}
+sub_03dd_04d5 far int() callers=0 argbytes={}
+sub_03dd_0507 far int() callers=0 argbytes={}
+sub_03dd_0539 far int() callers=0 argbytes={}
+sub_03dd_056b far int() callers=0 argbytes={}
+sub_03dd_058b far int() callers=0 argbytes={}
+sub_03dd_05d4 far int() callers=1 argbytes={0: 1}
+sub_03dd_05f2 far int() callers=0 argbytes={}
+sub_03dd_05f3 far int() callers=0 argbytes={}
+sub_03dd_0643 far int() callers=0 argbytes={}
+sub_03dd_0679 far int() callers=0 argbytes={}
+sub_03dd_06d1 far int() callers=0 argbytes={}
+sub_03dd_06ee far int() callers=0 argbytes={}
+sub_03dd_0717 far int() callers=0 argbytes={}
+sub_03dd_0734 far int() callers=0 argbytes={}
+sub_03dd_074a far int() callers=0 argbytes={}
+sub_03dd_0758 far int() callers=0 argbytes={}
+sub_03dd_0787 far int() callers=0 argbytes={}
+sub_03dd_07b2 far int() callers=0 argbytes={}
+sub_03dd_088c far int() callers=0 argbytes={}
+sub_03dd_0897 far int() callers=0 argbytes={}
+sub_03dd_08b3 far int() callers=0 argbytes={}
+sub_03dd_08bf far int() callers=0 argbytes={}
+sub_03dd_08d0 far int() callers=0 argbytes={}
+sub_03dd_0915 far int() callers=0 argbytes={}
+sub_03dd_0956 far int() callers=0 argbytes={}
+sub_03dd_09b7 far int() callers=0 argbytes={}
+sub_03dd_0a13 far int() callers=0 argbytes={}
+sub_03dd_0a77 far int() callers=0 argbytes={}
+sub_03dd_0b3c far int(w,w) callers=2 argbytes={4: 2}
+sub_03dd_0ba9 far int() callers=0 argbytes={}
+sub_03dd_0bb2 far int() callers=0 argbytes={}
+sub_03dd_0bbb far int() callers=1 argbytes={0: 1}
+sub_03dd_0bf5 far int() callers=0 argbytes={}
+sub_03dd_0c5b far int() callers=0 argbytes={}
+sub_03dd_0ca5 far int() callers=0 argbytes={}
+sub_03dd_0cdd far int() callers=0 argbytes={}
+sub_03dd_0d15 far int() callers=0 argbytes={}
+sub_03dd_0d3a far int() callers=0 argbytes={}
+sub_03dd_0d4b far int() callers=0 argbytes={}
+sub_03dd_0d55 far int() callers=0 argbytes={}
+sub_03dd_0d65 far int() callers=0 argbytes={}
+sub_03dd_0d9c far int() callers=0 argbytes={}
+sub_03dd_0dc3 far int() callers=0 argbytes={}
+sub_03dd_0e01 far int() callers=1 argbytes={0: 1}
+sub_03dd_0e0a far int() callers=0 argbytes={}
+sub_03dd_0e19 far int() callers=0 argbytes={}
+sub_03dd_0e78 far int(w,w) callers=2 argbytes={4: 2}
+sub_03dd_0f38 far int() callers=0 argbytes={}
+sub_03dd_0f41 far int() callers=0 argbytes={}
+sub_03dd_0f4a far int(w,w) callers=2 argbytes={4: 2}
+sub_03dd_0ffd far int() callers=0 argbytes={}
+sub_03dd_1006 far int() callers=0 argbytes={}
+sub_03dd_100f far int() callers=0 argbytes={}
+sub_03dd_10ab far int() callers=0 argbytes={}
+sub_03dd_10e1 far int() callers=0 argbytes={}
+sub_03dd_110e far int() callers=0 argbytes={}
+sub_03dd_1139 far int() callers=0 argbytes={}
+sub_03dd_1147 far int(w,w) callers=3 argbytes={4: 3}
+sub_03dd_116f far int() callers=0 argbytes={}
+sub_03dd_1197 far int() callers=0 argbytes={}
+sub_03dd_11da far int() callers=0 argbytes={}
+sub_03dd_120c far int() callers=0 argbytes={}
+sub_03dd_122a far int() callers=0 argbytes={}
+sub_03dd_1331 far int() callers=0 argbytes={}
+sub_03dd_1352 far int() callers=0 argbytes={}
+sub_03dd_13a6 far int() callers=0 argbytes={}
+sub_03dd_13d1 far int() callers=0 argbytes={}
+sub_03dd_1434 far int() callers=0 argbytes={}
+sub_03dd_14a2 far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_03dd_156c far int() callers=0 argbytes={}
+sub_03dd_1598 far int() callers=0 argbytes={}
+sub_03dd_1608 far int() callers=0 argbytes={}
+sub_03dd_1640 far int() callers=4 argbytes={0: 4}
+sub_03dd_1654 far int() callers=0 argbytes={}
+sub_03dd_165d far long(w,ptr) callers=9 argbytes={6: 7, 0: 2}
+sub_03dd_169e far int(w,w,w) callers=2 argbytes={6: 2}
+sub_03dd_16d3 far int() callers=0 argbytes={}
+sub_03dd_16f8 far int(w,w,w) callers=2 argbytes={6: 2}
+sub_03dd_1775 far int() callers=0 argbytes={}
+sub_03dd_17a6 far int() callers=0 argbytes={}
+sub_03dd_17b7 far int() callers=0 argbytes={}
+sub_03dd_17ea far int() callers=0 argbytes={}
+sub_03dd_1843 far int() callers=0 argbytes={}
+sub_03dd_1851 far int() callers=0 argbytes={}
+sub_03dd_187e far int() callers=1 argbytes={0: 1}
+sub_03dd_18d7 far int() callers=0 argbytes={}
+sub_03dd_18f5 far int() callers=0 argbytes={}
+sub_03dd_1908 far int() callers=0 argbytes={}
+sub_03dd_1969 far int() callers=0 argbytes={}
+sub_03dd_1979 far int() callers=1 argbytes={0: 1}
+sub_03dd_19b8 far int() callers=1 argbytes={0: 1}
+sub_03dd_19fb far int() callers=1 argbytes={0: 1}
+sub_03dd_1a23 far int() callers=1 argbytes={0: 1}
+sub_03dd_1a7f far int() callers=1 argbytes={0: 1}
+sub_03dd_1ac0 far int(w,w) callers=2 argbytes={4: 2}
+sub_03dd_1b6d far int() callers=1 argbytes={0: 1}
+sub_0596_0001 far int() callers=2 argbytes={0: 2}
+sub_0596_0033 far int() callers=2 argbytes={0: 2}
+sub_0596_0059 far int() callers=1 argbytes={0: 1}
+sub_0596_02a0 far long(w,w) callers=15 argbytes={0: 2, 4: 13}
+sub_0596_02b7 far int(w,w,w,w) callers=6 argbytes={8: 6}
+sub_0596_02d6 far long() callers=13 argbytes={0: 13}
+sub_0596_02ec far long() callers=10 argbytes={0: 10}
+sub_0596_02fe far int(w,w,w,w,w) callers=1 argbytes={10: 1}
+sub_0596_0327 far long(ptr) callers=2 argbytes={4: 2}
+sub_0596_033e far int(ptr,w,w,w,w) callers=3 argbytes={12: 3}
+sub_0596_0405 far int(ptr) callers=5 argbytes={0: 2, 4: 3}
+sub_0596_04b7 far int(w,w,w,w) callers=3 argbytes={8: 3}
+sub_0596_067e far int() callers=5 argbytes={0: 5}
+sub_0596_0687 far int() callers=2 argbytes={0: 2}
+sub_0596_0767 far int() callers=1 argbytes={0: 1}
+sub_0596_08e0 far int(w,w) callers=1 argbytes={4: 1}
+sub_0596_0965 far int(w,w) callers=2 argbytes={4: 2}
+sub_0596_09d5 far int() callers=1 argbytes={0: 1}
+sub_0596_09de far int() callers=1 argbytes={0: 1}
+sub_0596_09e7 far int(ptr,w,w,w,w) callers=1 argbytes={12: 1}
+sub_0596_0b11 far long(w,w,w) callers=8 argbytes={6: 8}
+sub_0596_0b28 far int(w,w,ptr,w,w,w,w,w) callers=2 argbytes={18: 2}
+sub_0596_0cca far int(w,w) callers=1 argbytes={4: 1}
+sub_0596_0e28 far int() callers=1 argbytes={0: 1}
+sub_0596_0e96 far int() callers=5 argbytes={0: 5}
+sub_0596_0ec3 far int() callers=4 argbytes={0: 4}
+sub_0596_0eee far int() callers=5 argbytes={0: 5}
+sub_0596_0f41 far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0596_11cf far int(w,w,w,w,w) callers=1 argbytes={10: 1}
+sub_0596_1252 far int() callers=2 argbytes={0: 2}
+sub_0596_13bb far int(w,w) callers=2 argbytes={0: 2}
+sub_0596_14c9 far int(w,w) callers=1 argbytes={4: 1}
+sub_0596_14d9 far int(w) callers=2 argbytes={0: 1, 4: 1}
+sub_0596_1543 far int(w,w) callers=2 argbytes={4: 2}
+sub_0596_1564 far int() callers=1 argbytes={0: 1}
+sub_0596_1614 far int() callers=1 argbytes={0: 1}
+sub_0596_169f far int() callers=5 argbytes={0: 5}
+sub_0596_171e far int() callers=1 argbytes={0: 1}
+sub_0596_17cd far int() callers=3 argbytes={0: 3}
+sub_0714_0004 far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_0714_002e far int(ptr,ptr,w,w) callers=1 argbytes={12: 1}
+sub_0714_0160 far int(ptr,ptr,w,w) callers=2 argbytes={12: 2}
+sub_0714_0210 far int(ptr) callers=1 argbytes={4: 1}
+sub_0714_023e far int(w,w,w) callers=9 argbytes={6: 9}
+sub_0714_031f far int(ptr,w) callers=2 argbytes={6: 2}
+sub_0714_03d2 far int(w,w,w) callers=5 argbytes={6: 5}
+sub_0714_04a0 far int(w,w) callers=2 argbytes={4: 2}
+sub_0714_0559 far int(w,w) callers=2 argbytes={4: 2}
+sub_0714_05e4 far int(ptr,w) callers=5 argbytes={6: 5}
+sub_0714_06c7 far int(w,w,w,w,w,w) callers=1 argbytes={12: 1}
+sub_0714_075b far int(ptr,w,w) callers=1 argbytes={8: 1}
+sub_0791_0005 far int(w,w) callers=3 argbytes={4: 3}
+sub_0791_0039 far int() callers=2 argbytes={0: 2}
+sub_0791_0048 far int(w,w) callers=1 argbytes={4: 1}
+sub_0791_0078 far int(w,w) callers=3 argbytes={4: 3}
+sub_0791_00e5 far int(w,w) callers=12 argbytes={4: 12}
+sub_0791_0132 far int(w,w) callers=1 argbytes={4: 1}
+sub_0791_0178 far int() callers=1 argbytes={0: 1}
+sub_0791_0187 far int(w,w) callers=1 argbytes={4: 1}
+sub_0791_01b7 far int(ptr) callers=2 argbytes={4: 2}
+sub_0791_020d far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_0791_025b far int() callers=1 argbytes={0: 1}
+sub_0791_034e far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0791_040c far int() callers=1 argbytes={0: 1}
+sub_0791_0506 far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_0791_05d9 far int() callers=1 argbytes={0: 1}
+sub_0791_05f7 far long() callers=3 argbytes={0: 3}
+sub_0791_0604 far int() callers=2 argbytes={0: 2}
+sub_0791_0638 far int(ptr,w) callers=4 argbytes={0: 1, 6: 3}
+sub_0791_0665 far int() callers=5 argbytes={0: 5}
+sub_0791_067f far long(w,w) callers=11 argbytes={4: 10, 0: 1}
+sub_07fe_000e far int() callers=4 argbytes={0: 4}
+sub_07fe_00b2 far int(w,w) callers=1 argbytes={4: 1}
+sub_07fe_015c far int() callers=1 argbytes={0: 1}
+sub_07fe_01d5 far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_07fe_0231 far int() callers=6 argbytes={0: 6}
+sub_07fe_02df far long() callers=1 argbytes={0: 1}
+sub_07fe_032a far int(ptr,w) callers=2 argbytes={6: 2}
+sub_07fe_035d far int() callers=4 argbytes={0: 4}
+sub_07fe_03ab far int(w,w) callers=1 argbytes={4: 1}
+sub_07fe_057e far int(w,w) callers=1 argbytes={4: 1}
+sub_07fe_06de far long(w,w,w,w,w) callers=4 argbytes={10: 4}
+sub_07fe_0847 far int() callers=1 argbytes={0: 1}
+sub_07fe_08d2 far int(w,w) callers=5 argbytes={4: 5}
+sub_07fe_09dc far int(w,w) callers=3 argbytes={4: 3}
+sub_07fe_0a0b far int(w,w) callers=1 argbytes={4: 1}
+sub_07fe_0bd5 far int(w,w) callers=3 argbytes={4: 3}
+sub_07fe_0d4c far int(w,w) callers=2 argbytes={4: 2}
+sub_07fe_0de3 far int() callers=3 argbytes={0: 3}
+sub_07fe_0f88 far int() callers=6 argbytes={0: 6}
+sub_07fe_0fdc far int() callers=1 argbytes={0: 1}
+sub_07fe_0ff1 far int() callers=1 argbytes={0: 1}
+sub_0936_0005 far int(w,w) callers=3 argbytes={4: 3}
+sub_0936_0053 far int(ptr) callers=2 argbytes={4: 2}
+sub_0936_00d1 far int() callers=1 argbytes={0: 1}
+sub_0936_0106 far int(w,w) callers=2 argbytes={4: 2}
+sub_0936_0225 far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0936_029e far int(ptr) callers=1 argbytes={4: 1}
+sub_0936_04af far int() callers=1 argbytes={0: 1}
+sub_0936_04f4 far int() callers=1 argbytes={0: 1}
+sub_0936_056e far int(ptr,w,w,w,w,w) callers=1 argbytes={14: 1}
+sub_0936_0855 far int(w,w,w) callers=1 argbytes={6: 1}
+sub_0936_0876 far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0936_0948 far int() callers=2 argbytes={0: 2}
+sub_0936_0985 far int() callers=2 argbytes={0: 2}
+sub_0936_09b1 far int() callers=1 argbytes={0: 1}
+sub_0936_0a73 far int() callers=1 argbytes={0: 1}
+sub_0936_0b5f far int() callers=1 argbytes={0: 1}
+sub_0936_0ba4 far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_0936_0bec far int() callers=2 argbytes={0: 2}
+sub_0936_0c14 far int() callers=1 argbytes={0: 1}
+sub_0936_0c5e far int(w,w) callers=5 argbytes={4: 5}
+sub_0936_0c9f far int() callers=1 argbytes={0: 1}
+sub_0936_0d18 far int() callers=1 argbytes={0: 1}
+sub_0936_0dc0 far int() callers=1 argbytes={0: 1}
+sub_0936_0df4 far int() callers=1 argbytes={0: 1}
+sub_0936_0e23 far int() callers=1 argbytes={0: 1}
+sub_0936_0e2d far int() callers=3 argbytes={0: 3}
+sub_0a21_0005 far int(w,w,w,ptr,w,w,w,ptr,ptr) callers=3 argbytes={24: 3}
+sub_0a86_0000 far int() callers=4 argbytes={0: 4}
+sub_0a86_01c6 far int() callers=1 argbytes={0: 1}
+sub_0a86_0298 far int() callers=2 argbytes={0: 2}
+sub_0a86_0325 far int() callers=2 argbytes={0: 2}
+sub_0a86_0370 far int(w,w) callers=1 argbytes={4: 1}
+sub_0a86_0517 far int() callers=1 argbytes={0: 1}
+sub_0a86_06ee far int() callers=1 argbytes={0: 1}
+sub_0a86_078e far int() callers=4 argbytes={0: 4}
+sub_0a86_081f far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0a86_08d3 far int(w,w,w,w) callers=1 argbytes={8: 1}
+sub_0a86_09af far int(ptr,w,w) callers=12 argbytes={8: 12}
+sub_0a86_0b29 far int(ptr,w) callers=12 argbytes={6: 12}
+sub_0a86_0c88 far int(ptr,w) callers=8 argbytes={6: 8}
+sub_0a86_0d96 far int(w,w) callers=5 argbytes={4: 5}
+sub_0a86_0e25 far int() callers=1 argbytes={0: 1}
+sub_0a86_0e64 far int(w,w) callers=5 argbytes={4: 5}
+sub_0a86_11ee far int() callers=1 argbytes={0: 1}
+sub_0a86_12e5 far int() callers=2 argbytes={0: 2}
+sub_0a86_1341 far int() callers=3 argbytes={0: 3}
+sub_0a86_136f far int() callers=1 argbytes={0: 1}
+sub_0a86_13a1 far int() callers=1 argbytes={0: 1}
+sub_0a86_13e2 far int() callers=5 argbytes={0: 5}
+sub_0a86_14ae far int() callers=1 argbytes={0: 1}
+sub_0a86_1519 far int() callers=1 argbytes={0: 1}
+sub_0a86_1530 far int() callers=1 argbytes={0: 1}
+sub_0a86_154d near int() callers=1 argbytes={0: 1}
+sub_0c05_0009 far int(w,w) callers=1 argbytes={4: 1}
+sub_0c05_00fc far int() callers=1 argbytes={0: 1}
+sub_0c05_01ea far int(w,w) callers=1 argbytes={4: 1}
+sub_0c05_020c far int() callers=1 argbytes={0: 1}
+sub_0c05_0254 far int(w,w,w,w) callers=2 argbytes={8: 2}
+sub_0c05_036f far int() callers=1 argbytes={0: 1}
+sub_0c05_0400 far int() callers=1 argbytes={0: 1}
+sub_0c05_0511 far int() callers=1 argbytes={0: 1}
+sub_0c05_056b far int() callers=2 argbytes={0: 2}
+sub_0c66_0003 far long(w,w,w) callers=9 argbytes={6: 9}
+sub_0c9b_0022 far int(ptr,ptr,w) callers=1 argbytes={10: 1}
+sub_0c9b_005c far int(ptr,ptr) callers=2 argbytes={8: 2}
+sub_0c9b_00d8 far int(w,w,w,w) callers=4 argbytes={8: 4}
+sub_0c9b_00fe far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0c9b_01cd far int(ptr,ptr) callers=2 argbytes={8: 2}
+sub_0c9b_024e far int() callers=2 argbytes={0: 2}
+sub_0c9b_0293 far int() callers=1 argbytes={0: 1}
+sub_0c9b_02b6 far int() callers=1 argbytes={0: 1}
+sub_0c9b_0323 far int(w,w,w) callers=2 argbytes={6: 1, 0: 1}
+sub_0c9b_03e5 far int() callers=1 argbytes={0: 1}
+sub_0c9b_0404 far int() callers=2 argbytes={0: 2}
+sub_0c9b_0464 far int() callers=2 argbytes={0: 2}
+sub_0c9b_04a1 far int() callers=2 argbytes={0: 2}
+sub_0c9b_04cc far int() callers=1 argbytes={0: 1}
+sub_0c9b_04f4 far int(ptr,ptr,w,w,w) callers=4 argbytes={14: 3, 0: 1}
+sub_0c9b_05b2 far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0c9b_06a4 far int() callers=2 argbytes={0: 1, 14: 1}
+sub_0c9b_06fe far int() callers=4 argbytes={0: 4}
+sub_0c9b_0744 far int(ptr) callers=1 argbytes={4: 1}
+sub_0c9b_077c far int() callers=2 argbytes={0: 2}
+sub_0c9b_083f far int() callers=2 argbytes={0: 2}
+sub_0c9b_0861 far int(w,w,w) callers=1 argbytes={6: 1}
+sub_0c9b_08e8 far int() callers=1 argbytes={0: 1}
+sub_0c9b_0974 far int(ptr,ptr,w) callers=1 argbytes={10: 1}
+sub_0c9b_09ae far int(w,w) callers=1 argbytes={4: 1}
+sub_0c9b_0a15 far int(w,w) callers=1 argbytes={4: 1}
+sub_0c9b_0a66 far int(w,w) callers=3 argbytes={4: 3}
+sub_0c9b_0ae4 far int() callers=4 argbytes={0: 4}
+sub_0c9b_0b20 far int() callers=1 argbytes={0: 1}
+sub_0c9b_0b85 far int(w,w,w) callers=2 argbytes={6: 2}
+sub_0c9b_0bba far int(w,w,w) callers=2 argbytes={6: 2}
+sub_0c9b_0c0b far int(ptr,ptr,w) callers=1 argbytes={0: 1}
+sub_0c9b_0c40 far int(ptr,ptr,w) callers=1 argbytes={0: 1}
+sub_0c9b_0c70 far int(ptr,ptr) callers=1 argbytes={0: 1}
+sub_0c9b_0ca6 far int(ptr,ptr) callers=1 argbytes={0: 1}
+sub_0c9b_0e15 far int() callers=1 argbytes={0: 1}
+sub_0d7d_000a far long(w,w) callers=1 argbytes={4: 1}
+sub_0d7d_002e far int() callers=1 argbytes={0: 1}
+sub_0d7d_0046 near int() callers=0 argbytes={}
+sub_0d84_0002 far int(w,w,ptr,w,w) callers=2 argbytes={12: 2}
+sub_0d84_0235 near int() callers=1 argbytes={0: 1}
+sub_0d84_02b0 near int() callers=1 argbytes={0: 1}
+sub_0d84_032c near int() callers=1 argbytes={0: 1}
+sub_0d84_039e near long() callers=1 argbytes={0: 1}
+sub_0dc5_0000 far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_0040 far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_007f far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_00ca far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_0117 far int() callers=1 argbytes={0: 1}
+sub_0dc5_0148 far int() callers=2 argbytes={0: 2}
+sub_0dc5_017d far int() callers=4 argbytes={0: 4}
+sub_0dc5_01c5 far int() callers=3 argbytes={0: 3}
+sub_0dc5_020d far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0dc5_022e far int() callers=1 argbytes={0: 1}
+sub_0dc5_026b far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_02dd far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_0355 far int(w,w) callers=1 argbytes={4: 1}
+sub_0dc5_03de far int(ptr,w,w,w,w,w,w) callers=1 argbytes={16: 1}
+sub_0dc5_0448 far int(ptr,ptr,w) callers=2 argbytes={10: 2}
+sub_0dc5_04b1 far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0dc5_051b far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0dc5_0551 far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0dc5_058d far int(w,w,w,w,w) callers=1 argbytes={10: 1}
+sub_0dc5_0780 far int() callers=1 argbytes={0: 1}
+sub_0e3f_00be far int(ptr,w,w) callers=2 argbytes={8: 2}
+sub_0e3f_00de far int(ptr) callers=1 argbytes={4: 1}
+sub_0e3f_0104 far int() callers=3 argbytes={0: 3}
+sub_0e66_0006 far long(ptr,w,w,ptr) callers=7 argbytes={12: 7}
+sub_0e66_0031 far long(ptr,ptr) callers=7 argbytes={6: 7}
+sub_0e66_0114 far int(ptr,ptr,ptr) callers=2 argbytes={12: 2}
+sub_0e66_0191 far long(ptr,ptr,ptr) callers=22 argbytes={12: 22}
+sub_0e66_022b far long(ptr) callers=11 argbytes={4: 11}
+sub_0e9b_000c far int(ptr,ptr) callers=5 argbytes={8: 5}
+sub_0e9f_0013 far int(w,w,w) callers=9 argbytes={0: 6, 6: 3}
+sub_0e9f_006f far int(w,w,w) callers=6 argbytes={0: 4, 6: 2}
+sub_0e9f_00c1 far int() callers=1 argbytes={0: 1}
+sub_0e9f_0116 far int() callers=0 argbytes={}
+sub_0e9f_011f far int() callers=1 argbytes={0: 1}
+sub_0e9f_017e far int(w,ptr) callers=1 argbytes={0: 1}
+sub_0e9f_01a8 far int(w,ptr) callers=1 argbytes={6: 1}
+sub_0ebb_01d2 far int() callers=0 argbytes={}
+sub_0ebb_0301 far int() callers=1 argbytes={0: 1}
+sub_0ebb_0363 far int() callers=1 argbytes={0: 1}
+sub_0ebb_0372 far int() callers=0 argbytes={}
+sub_0ebb_037f near int() callers=1 argbytes={0: 1}
+sub_0ebb_03aa near int() callers=1 argbytes={0: 1}
+sub_0efe_0030 far int() callers=0 argbytes={}
+sub_0efe_0031 far int() callers=1 argbytes={0: 1}
+sub_0efe_004b far int() callers=1 argbytes={0: 1}
+sub_0efe_0158 far int(ptr) callers=1 argbytes={4: 1}
+sub_0efe_016f far int(ptr) callers=1 argbytes={4: 1}
+sub_0efe_0186 near int() callers=2 argbytes={0: 2}
+sub_0efe_01c0 far int(ptr) callers=1 argbytes={4: 1}
+sub_0efe_01d5 near int() callers=1 argbytes={0: 1}
+sub_0efe_0202 far int() callers=1 argbytes={0: 1}
+sub_0f21_0004 far int() callers=4 argbytes={0: 4}
+sub_0f23_000a far long(ptr) callers=1 argbytes={4: 1}
+sub_0f27_0004 far long(ptr) callers=27 argbytes={4: 27}
+sub_0f27_0061 far int(ptr) callers=29 argbytes={4: 28, 0: 1}
+sub_0f27_0079 far int(ptr,ptr) callers=1 argbytes={8: 1}
+sub_0f32_000d far int(ptr,ptr,ptr) callers=2 argbytes={12: 2}
+sub_0f3a_0004 far long(w,w) callers=1 argbytes={4: 1}
+sub_0f3a_00d3 near long() callers=4 argbytes={0: 4}
+sub_0f48_0029 near int() callers=3 argbytes={0: 3}
+sub_0f48_02ab near long() callers=3 argbytes={0: 3}
+sub_0f48_0314 far int(w,ptr,ptr,w,w,ptr) callers=2 argbytes={18: 2}
+sub_0fa2_0008 far int(w,w,w,w,w) callers=4 argbytes={0: 2, 10: 2}
+sub_0fe6_01ac far int(w,w) callers=1 argbytes={0: 1}
+sub_0fe6_01bf far int(w,w) callers=1 argbytes={0: 1}
+sub_0fe6_01d2 far int(w,w,w,ptr,ptr) callers=6 argbytes={14: 6}
+sub_1036_000a far int(ptr,ptr) callers=12 argbytes={8: 11, 0: 1}
+sub_103b_0004 far int(ptr,w,w,ptr,w,w,w,w) callers=1 argbytes={20: 1}
+sub_1040_0006 far int(w,w,w,w,w) callers=31 argbytes={0: 15, 10: 16}
+sub_1040_023a far int(w,w,w,w) callers=2 argbytes={0: 1, 6: 1}
+sub_106a_0407 far int() callers=1 argbytes={0: 1}
+sub_106a_043f far int() callers=2 argbytes={0: 2}
+sub_106a_0477 far int(w,w,w,ptr) callers=51 argbytes={10: 49, 0: 2}
+sub_106a_04ff far int(w,w,w,ptr,w) callers=5 argbytes={12: 4, 0: 1}
+sub_106a_0593 far int(w,w,w,ptr,w) callers=2 argbytes={12: 2}
+sub_106a_06a1 far int(w,w,w,ptr,w) callers=3 argbytes={12: 3}
+sub_10f5_0028 far int(w,w,w,w,w) callers=9 argbytes={0: 3, 10: 6}
+sub_1100_000b far int(w,w) callers=9 argbytes={4: 9}
+sub_1100_0096 far int(w,w) callers=5 argbytes={4: 5}
+sub_1100_00c0 far int(w,w) callers=9 argbytes={4: 8, 2: 1}
+sub_110c_000c far int(w,w) callers=1 argbytes={4: 1}
+sub_1110_01bc far long(w,w,ptr,ptr) callers=2 argbytes={12: 2}
+sub_115f_000c far int(w,ptr) callers=3 argbytes={6: 3}
+sub_115f_0054 far int(w,ptr) callers=1 argbytes={6: 1}
+sub_116d_000c far int(w,w,w,w,w) callers=3 argbytes={10: 3}
+sub_1172_0012 far int(w,w,ptr,ptr) callers=23 argbytes={0: 3, 12: 20}
+sub_1172_011d far int(ptr,w) callers=1 argbytes={0: 1}
+sub_1172_018c far int(ptr) callers=6 argbytes={4: 6}
+sub_118f_0004 far int() callers=1 argbytes={0: 1}
+sub_118f_00cd far int() callers=1 argbytes={0: 1}
+sub_118f_00de far int() callers=7 argbytes={0: 7}
+sub_118f_00f7 far int() callers=5 argbytes={0: 5}
+sub_118f_0107 far int() callers=7 argbytes={0: 7}
+sub_118f_01ab far int(ptr,w,w) callers=1 argbytes={8: 1}
+sub_11b2_0001 far int() callers=1 argbytes={0: 1}
+sub_11b2_0043 far int() callers=1 argbytes={0: 1}
+sub_11b7_000d far int(w) callers=1 argbytes={0: 1}
+sub_11bb_0008 far int() callers=0 argbytes={}
+sub_11bb_0009 far int(w) callers=2 argbytes={0: 2}
+sub_11c1_000b far long(w) callers=1 argbytes={2: 1}
+sub_11c1_0020 far int(ptr) callers=1 argbytes={4: 1}
+sub_11c1_0088 far int(ptr,w,w) callers=1 argbytes={8: 1}
+sub_11c1_0138 far int(w,w) callers=1 argbytes={4: 1}
+sub_11c1_01a6 far int(w,w) callers=1 argbytes={4: 1}
+sub_11c1_020c far int(w,w) callers=1 argbytes={0: 1}
+sub_11f2_000b near int(ptr) callers=1 argbytes={0: 1}
+sub_11f2_00e2 far long(w,w) callers=2 argbytes={4: 2}
+sub_1207_000d far int(w,w) callers=1 argbytes={4: 1}
+sub_1209_000d far int(ptr,w,w) callers=3 argbytes={8: 3}
+sub_120e_0002 far int(ptr,ptr,w) callers=24 argbytes={10: 22, 0: 2}
+sub_1215_0017 far int() callers=3 argbytes={0: 3}

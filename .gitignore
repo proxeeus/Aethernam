@@ -1,0 +1,31 @@
+# Build output (an app built with BUNDLE_DATA=1 contains the game's files - never commit it)
+build/
+
+# Material extracted from the original game - keep it local only:
+# unpacked original executables, decompressed resources, raw load images,
+# disassembly listings (they contain the original code bytes), generated function maps
+re/unpacked/
+re/assets/
+re/*.img
+re/*.asm
+re/*.json
+
+# Game data must never be added, wherever it is
+*.PAK
+*.pak
+*.CC1
+*.cc1
+*.CC4
+*.cc4
+*.DAT
+*.dat
+*.AVE
+*.ave
+*.TAT
+*.tat
+*.COM
+*.BAT
+
+# Misc
+*.wav
+.DS_Store

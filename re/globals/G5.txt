@@ -1,0 +1,54 @@
+# G5 (segments 0714, 0791, 0a21) - DGROUP globals.  W = written by G5 code, R = read only.
+0x00ce  s16  current room number (actor+0x0c compared with it) R
+0x00a8  s16  number of exit zones in table 0x752 R
+0x00f0  u16  number of floor objects in table 0xa18 R
+0x00d6  s16  current music number (MUS.PAK entry) W (0791_0078)
+0x00e8  s16  music volume (0 = off); lowered by 0791_0005 W
+0x00ea  s16  sound-effect volume/enable (>0 = sfx on) R
+0x011a  array[10]xstruct(0x46)  actor table; fields: +0 x s16, +2 y s16 (feet), +0x0c room s16, +0x0e anim/state s16, +0x10 anim-changed s16, +0x12 facing dir s16 (1 up,2 right,3 down,4 left), +0x23 half width u8, +0x24 height u8, +0x25 last collision kind u8 (8 = exiting, collisions off), +0x26 last collision index u8, +0x2a hit points s16, +0x30 walk flags u16 (bits0-1 axis order, 0x4 saved target valid), +0x32/+0x34 walk target x,y, +0x38/+0x3a saved target x,y, +0x3c/+0x3e walk limits  W (+0x25,+0x26,+0x2a,+0x30,+0x32..+0x3a)
+0x0144  s16  = actor[0]+0x2a, player hit points (0..99) W (0791_0604)
+0x0752  array[?]x6  exit zones: +0 u8 direction/type (1..4), +1 s8 link (arg of sub_0053_11d5), +2 x1 s16, +4 x2 s16 (y range derived from floor horizon, see sub_0053_13cf) R
+0x0a18  array[10]x8  floor objects: +0 object id s16 (index into 0xfbc), +2 u8, +4 x s16, +6 y s16 R
+0x0a68  array[320]xu8  floor horizon: minimum walkable y for each screen column x R
+0x0fbc  array[?]xs16  object location/state per object id (0 = lying in room) R
+0x1284  u8   number of obstacle rectangles in 0x1286 R
+0x1286  array[?]x4  obstacle rects: x1/2 u8, y1 u8, x2/2 u8, y2 u8 (x1==x2 = unused) R
+0x1740  s16  number of queued lightning bolts in 0x30ae W (cleared by 0791_040c)
+0x173a  s16  colour-cycle value bounced 0xc1..0xce by 0791_040c W
+0x173c  s16  its step (+1/-1) W
+0x17c0  fptr(DSPTR)  music data buffer (0x5208 bytes, farmalloc'd at init) R (contents W via PAK loader)
+0x17c4  fptr(DSPTR)  sound-effect bank buffer (0x2968 bytes) R (contents W via PAK loader)
+0x18b0  fptr(DSPTR)  -> "MUS.PAK" file name (DS 0x18fb) R
+0x1fdc  s32  game tick/frame counter R
+0x2d38  fptr(DSPTR)  current draw buffer; temporarily switched to 0x3056 by 0791_025b W (restored)
+0x3014  array[4]xs16  scratch rect {x1,y1,x2,y2} built by 0714_03d2 / 0714_04a0 W
+0x3020  array[4]xs16  sprinkle-effect rect x1,y1,x2,y2 (set by script 03dd_13a6) R
+0x3036  s16  particle origin x (also palette-tint level for 03dd_040e) W
+0x3038  s16  particle origin y W
+0x303e  s16  particle count W
+0x304c  fptr(DSPTR)  base palette (768 bytes, 8-bit RGB) R
+0x3056  fptr(DSPTR)  background (clean) screen buffer R
+0x30ae  array[>=50]x8  particles {+0 x,+2 y,+4 vy,+6 vx} / lightning bolts {+0 x1,+2 y1,+4 y2,+6 x2} (s16) W
+0x3260  s16  particle effect timer (frames), decremented by 0596_0059 W
+0x32a0  s16  sprinkle-effect pending flag W (cleared by 0791_05d9)
+0x32e0  u8   morph: header byte0 of current polygon A W
+0x32e1  u8   morph: header byte0 of current polygon B W
+0x32e2  array[200]xu8  morph: scratch copy of polygon A (4-byte header + int16 x,y points) W
+0x33aa  array[200]xu8  morph: scratch copy of polygon B W
+0x3472  u8   morph: polygon count of frame A W
+0x3474  fptr(DSPTR)  morph: cursor into 0x32e2 W
+0x3478  u8   morph: polygon count of frame B W
+0x347a  fptr(DSPTR)  morph: cursor into 0x33aa W
+0x347e  u8   morph: frame A uses signed-byte coords (flag bit0) W
+0x347f  u8   morph: frame B uses signed-byte coords W
+0x3480  u8   morph: point count of current polygon A W
+0x3481  u8   morph: point count of current polygon B W
+0x3482  u8   morph: polygon loop index W
+0x3483  u8   morph: output polygon count W
+0x3484  u8   morph: point loop index W
+0x3486  fptr(DSPTR)  morph: saved cursor (point repeated for padding) W
+0x348a  fptr(DSPTR)  morph: pointer to output header (out+8), byte +1 = polygon count W
+0x348e  u8   morph: min(polycount A,B) W
+0x348f  u8   morph: max(polycount A,B) W
+0x3490  u8   morph: min(point count A,B) W
+0x3491  u8   morph: max(point count A,B) W

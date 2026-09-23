@@ -1,0 +1,90 @@
+# G4 (segment 0596) – DGROUP globals.  W = written by G4 code, R = read only.
+0x009c  s16  speech bubble y override (0 = above speaker)  W(0 by 067e) R
+0x00a0  s16  scene type/state (8: bubble x fixed at 0xa0; 0: clear rows 0..0x12 before room bg + room 0x13 sparkles; 3: room 0x17 palette pulse; 0x63: special full-screen image DSPTR(0x34c2))  R
+0x00a8  s16  number of exit zones in table 0x752  R
+0x00b0  s16  palette pulse level 0..15 (room 0x17)  W
+0x00b2  s16  palette pulse direction +1/-1  W
+0x00c6  s16  parallax mode: 0 none, 1 = one 1/2-scale layer, 2 = 1/4-scale + 1/2-scale layers  R
+0x00ce  s16  current room number (room pack sprite room*2 = bg, room*2+1 = fg/object list)  R
+0x00d3  u8   sub-palette index currently installed (colours 0xa0..0xaf)  W
+0x00d4  u8   requested sub-palette index  R
+0x00dc  s16  flag: present only dirty rect 0xde..0xe4 this frame  W(0)
+0x00de  s16  dirty rect x1  R
+0x00e0  s16  dirty rect x2  R
+0x00e2  s16  dirty rect y1  R
+0x00e4  s16  dirty rect y2  R
+0x00ee  s16  flag: apply colour-0xf gradient effect to background (sub_0dc5_022e)  R
+0x010c  s16  room FX mode: 1 hero reflection in windows, 2 mirror (rect 0x3036/0x3038), 3 particles (timer 0x3260), 4 tint  RW(0 when 0x3260 expires)
+0x011a  struct array[?]x0x46  actors (0 = hero): +0 x, +2 y, +0x0c room, +0x0e anim state (4 = facing reversed in mirror), +0x10 anim type (2 = morph), +0x12 kind/dir-set (1,2,4), +0x16 fptr sprite/anim PAK, +0x1a sequence idx, +0x1c frame idx/dir, +0x1e morph step, +0x20 frame count, +0x23 u8,+0x24 u8 (loaded, unused), +0x2c u8 text colour, +0x3c clip x1, +0x3e clip x2, +0x40 u8 clip y1, +0x41 u8 clip y2  R, W(+0x1c of actor1, +0x1e)
+0x011c  s16  hero y (actor0 +2)  R
+0x012c  s16  hero kind (actor0 +0x12)  R
+0x0134  s16  hero sequence idx (actor0 +0x1a)  R
+0x0136  s16  hero frame idx (actor0 +0x1c)  R
+0x0146  u8   hero text colour (actor0 +0x2c); 0x19 = animated highlight in choice menu  R
+0x0160  struct  actor 1 (reflection actor for fx 1)  W(+0x1c)
+0x0692  array[16]x12  projectile slots: +0 u8 used (0xff free), +1 s8 owner, +2 s16 age (-1 flying, 0..8 impact frame), +4 s16 draw param, +6 s16 x, +8 s16 y  R
+0x0752  array[?]x6  exit zones: +0 u8 type (3 = bottom edge marker drawn), +1 s8 link, +2 s16 x1, +4 s16 x2  R
+0x0bbc  struct  backdrop layers, word array indexed by slot: [0xbbc+slot*2]=D??.PAK entry (>0 = present), [0xbbe+slot*2]=sprite idx in it; slot 0 main; parallax: 0xbc0 room(slot 3) ,0xbc2 pak,0xbc4 spr,0xbc6 x,0xbc8 y ; 0xbca room(slot 8),0xbcc pak,0xbce spr,0xbd0 x,0xbd2 y  R
+0x1738  s16  flag: bottom panel needs redraw  RW(0 by 0ec3)
+0x173e  s16  flag: blank play area request  RW(0)
+0x1740  s16  queued lightning bolt count (non-zero -> sub_0791_040c)  R
+0x177c  s16  zoom/present mode 0..3  R
+0x17a6  s16  action bar cursor x  R
+0x17a8  s16  action bar y  R
+0x17b0  s16  action bar selected action index  R
+0x17b4  fptr(DSPTR)  64K backdrop load buffer (farmalloc 0xFFFF)  W
+0x17b8  s16  menu highlight colour cycle value (0x16..0x19; set to 0x4f by 0053_1deb)  W
+0x17ba  s16  menu highlight cycle direction +1/-1  W
+0x17bc  s16  speech bubble active  W
+0x17be  s16  speech: another page follows  W
+0x17e2  s16  pending dissolve-present (sub_0dc5_017d)  R
+0x180e  array[9]xs16  mirror sprite per direction, kinds != 1 (0x18..0x1f, -1)  R
+0x1820  array[9]xs16  mirror sprite per direction, kind 1 (0x10..0x17, -1)  R
+0x1896  s16  frame counter used for blinking (bit 0)  R
+0x18a0  fptr(DSPTR)  animation PAK name ("A00.PAK")  R
+0x18a4  fptr(DSPTR)  backdrop PAK name ("D00.PAK")  R
+0x1abc  array[8+]xs16  hero sequence -> reflection-actor sequence map  R
+0x2d38  fptr(DSPTR)  draw buffer (64000 bytes)  R (temporarily W in dead 0f08)
+0x2d3c  fptr(DSPTR)  screen (VGA A000:0000)  R
+0x2d4e  u8   current key scancode (0x1c Enter, 0x01 Esc)  R
+0x2d66  u16  frame/present counter  W(inc)
+0x3028  fptr(DSPTR)  next speech page  W
+0x301c  fptr(DSPTR)  sub-palette table (48 bytes = 16 RGB per index)  R
+0x302c  s16  choice menu x  R
+0x302e  s16  choice menu y  R
+0x3032  fptr(DSPTR)  working palette (768 bytes RGB)  R (contents W)
+0x3036  s16  FX param x (mirror rect x)  R
+0x3038  s16  FX param y (mirror rect y)  R
+0x303a  s16  choice menu answer count (<=6)  R
+0x303c  s16  play area top y  R
+0x3042  fptr(DSPTR)  game font  R
+0x304c  fptr(DSPTR)  base palette (768 bytes)  R (contents W)
+0x3054  s16  play area bottom y (0xac)  R
+0x3056  fptr(DSPTR)  room background buffer (64000 bytes)  R (contents W)
+0x3062  fptr(DSPTR)  interface glyph bank (bottom panel)  R
+0x3066  fptr(DSPTR)  speech bubble corner sprite bank  R
+0x306a  array[6]x10  choice answers: +0 s16 text id, +2 fptr text, +6 fptr script target  R
+0x30aa  s16  speech page half-width (max line width/2)  W
+0x30ac  s16  speech page height (10*lines)  W
+0x3242  fptr(DSPTR)  current speech page text  W
+0x3252  fptr(DSPTR)  choice menu question text  R
+0x325e  s16  speech text colour  R
+0x3260  s16  particle FX timer  W(dec)
+0x3262  fptr(DSPTR)  projectile sprite PAK  R
+0x3266  s16  action bar state (3 = flash)  R
+0x3270  fptr(DSPTR)  depth-sorted draw list: +0 u8 count, records of 2 bytes from +3 (u8 code: hi nibble kind, lo nibble index)  R
+0x3274  s16  choice menu selected answer  R
+0x3278  s16  choice menu question text id (-1 none)  R
+0x3286  fptr(DSPTR)  room graphics PAK (entry 0 sprites, entry 1 packed images)  R
+0x328a  s16  speech page display countdown  W
+0x328c  s16  animation sound-cue count (3-byte cues at DSPTR(0x32a2))  R
+0x3294  fptr(DSPTR)  morph work buffer (sub_0a21_0005 output)  R
+0x3298  s16  speaking actor index  R
+0x329a  s16  look countdown (beam drawn while !=0)  R
+0x32a0  s16  sprinkle FX pending (-> sub_0791_05d9)  R
+0x32a2  fptr(DSPTR)  animation sound-cue pointer into script bytecode  W
+0x32aa  s16  copy of initial speech display time  W
+0x34c2  fptr(DSPTR)  full-screen image used when [0xa0]==0x63  R
+0x11be  s16  flag: hero sparkle effect (sub_0791_0506)  R
+0x11c0  s16  flag enabling room-0x17 palette pulse  R
+SS:0x192..0x198  s16 x4  clip rect: 0x192 ymin, 0x194 ymax, 0x196 xmin, 0x198 xmax (via sub_0fe6_01ac/01bf)  W

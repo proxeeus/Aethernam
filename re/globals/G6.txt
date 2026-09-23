@@ -1,0 +1,64 @@
+# G6 (segments 07fe, 0c05) - DGROUP globals.  W = written by G6 code, R = read only.
+0x0096  s16        R/W  "savegame state pending" flag: set by load (03ab) so the room/mode switch code applies savebuf via 035d/015c/0231; cleared by 03ab/0bd5
+0x0098  s16        W    written 0 only (after save, on menu Esc); never read anywhere (dead flag)
+0x009e  array[0x15ce]xu8  R/W  start of the game-state block saved in savegames (DS 0x9e..0x166b) -> savebuf+0x3e6; contains 0xa0, 0xa2, 0xd6, 0xd8, 0xe6..0xea, 0xf6, 0x11a, 0x144, 0x7b2, 0x928 ...
+0x00a0  s16        R    current room (-1 = 3D outdoor mode); save offset +0x3e8
+0x00a2  s16        W    next room request (-1 = go to 3D mode); set by 03ab / 0c05_0400
+0x00d6  s16        R    current music track (restarted by 035d via sub_0791_0078, which rewrites it)
+0x00d8  u16        R    number of entries in anim table 0x7b2 (jb compare)
+0x00e6  s16        R/W  3D view window size 0..2 (options "Window"; 2 = full)
+0x00e8  s16        R/W  music volume 0..0x78 (level*8; initial 127) ; sent to sub_0e9f_0013(vol,0,0x2000)
+0x00ea  s16        R/W  sound-effect volume 0..0x78 (level*8; initial 127) ; sent to sub_0e9f_006f(vol,0,0x2000)
+0x00f6  array[13]xu8 R/W bitfield of 104 game flags (set by 0c05_01ea, counted by 0c05_020c)
+0x011a  array[10]x70 struct R/W actors; +0x16 = fptr sprite/resource (FP) patched by 07fe_01d5
+0x0144  s16        R    hero hit points (0..99); load menu Esc only allowed if > 0
+0x07b2  array[17]x22 struct R/W anim table (count 0xd8): +0 fptr anim start, +4 fptr current anim position (both FP, rebased by 07fe_015c)
+0x0928  array[20]x6 struct R/W resource cache: +0 s8 kind (0 = PAK entry, else fixed resource id for sub_0053_03a5), +1 s8 PAK index, +2 fptr data (FP) - rewritten by 07fe_0231, freed by 07fe_02df
+0x0ff4  s16        R    condition for special doors of 0x2244 (0 -> only set 0x2286)
+0x11bc  s16        W    index of special door entered (0c05_0400)
+0x11c8  s16        W    copy protection passed flag (0c05_00fc)
+0x166c  -          -    end of saved game-state block (exclusive)
+0x177e  fptr(DSPTR) R   loaded anim resource: starts with u16 offset table (used by 07fe_015c)
+0x18a0  fptr(DSPTR) R   current PAK file name (initially "A00.PAK") used to reload cache entries
+0x1ae4  array[6]xchar W "0.ave" save file name; byte 0 patched with '0'+slot
+0x1af2  s16        R/W  selected save slot 0..9 (initial 1)
+0x1afe  array[37]xu8 R  scancode table for name entry: idx 0..25 -> 'A'..'Z' (AZERTY), 26..35 -> '0'..'9', 36 (space) -> ':'
+0x1b24  array[5]xfptr(DSPTR) R option labels " LOAD"," SAVE","Music","Sound","Window"
+0x1b38  array[5]x8 struct R option item rects {x1,y1,x2,y2} (s16)
+0x1b60  array[5]x4 struct R option label positions {x,y} (s16)
+0x1b74  array[3]x8 struct R window-size marker rects {x1,y1,x2,y2}
+0x1b8c  s16        R/W  selected options item 0..4 (0 Load,1 Save,2 Music,3 Sound,4 Window)
+0x1bb7  array[4]xchar R "a99" PAK name (options panel graphics, entry 0x37)
+0x1bbc  array[?]xs16 R/W list table for 3D objects: consecutive lists terminated by -1 (list n located by sub_0936_0005); words +4,+5 of a list = x,y (temporarily modified by 0c05_056b)
+0x1fba  array[0x3e]xu8 R/W 3D-mode state block saved in savegames (-> savebuf+0x28), fields below
+0x1fc2  s16        R/W  3D camera x
+0x1fc4  s16        R/W  3D camera y
+0x1fc6  s16        R/W  3D movement speed (decremented by 5 while > 8 in 0c05_0254)
+0x1fcd  s8         R/W  3D camera heading
+0x1fd6  s16        R    3D zone number
+0x1fd8  s16        W    zone whose objects are spawned (set = 0x1fd6 by 0c05_0511)
+0x1fda  s16        R    encounter sub-index for 0c05_056b
+0x1fe2  s16        R    room to re-enter when a 3D-mode game loads an indoor save (copied to 0xa2)
+0x1fe4  s16        W    "return to 3D mode" request, set by load of an outdoor save while indoors
+0x21a4  array[20]x8 struct R doors of 3D world {s16 zone, s16 x, s16 y, s16 unused} -> room index
+0x2244  array[3]x8 struct R special doors, same layout
+0x2286  s16        W    set to 1 when a special door is refused (0xff4 == 0)
+0x22a4  array[7]x6 struct R camera path waypoints {x,y,heading} for 0c05_036f
+0x22ce  array[12]xfptr(DSPTR) R month strings "JAN".."DEC" (copy protection)
+0x22fe  array[16]xfptr(DSPTR) R day strings "01".."25" (copy protection)
+0x239e  char[]     R    "Reference       :"
+0x23b0  char[]     R    "intro" (PAK with protection answers, entry 2 = s16[192])
+0x23b6  char[]     R    "i2" (PAK, entry 0xc = flight overlay sprite)
+0x2d38  fptr(DSPTR) R/W current draw buffer (temporarily set to the screen 0x2d3c and restored)
+0x2d3c  fptr(DSPTR) R   screen buffer (VGA)
+0x2d40  fnptr(DSPTR) W  fopen "file not found" handler int16_t(*)(uint8_t *name); NULL while probing save files, else sub_07fe_00b2
+0x2d4a  u8         R    direction input bits (1 up, 2 down, 4 left, 8 right, 0x80 = extra key -> space in name entry); written by keyboard IRQ
+0x2d4e  u8         R/W  last key scancode (0 = none); written by keyboard IRQ, cleared by 00b2
+0x3056  fptr(DSPTR) R   background buffer (restored after protection screen)
+0x3290  fptr(DSPTR) R   text/message resource ('*'-separated strings, see sub_03dd_165d)
+0x3294  fptr(DSPTR) R   8000-byte savegame buffer (allocated by main)
+0x329e  s16        W    set to 7 on special door entry
+0x32b0  fptr(DSPTR) R/W options panel sprite bank ("a99" #0x37); freed and NULLed
+0x32b4  array[10]xu8 R/W "actor already patched" flags for 07fe_01d5 (cleared by 0231)
+0x32be  fptr(DSPTR) R/W save-slot table 10 x 40 bytes (name, byte0 0xff = empty); points to a local array of sub_07fe_0bd5
+0x34ce  fptr(DSPTR) R/W overlay sprite bank of 0c05_036f/0254 ("i2" #0xc)

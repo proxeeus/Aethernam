@@ -1,0 +1,85 @@
+# G8 (seg 0a86) DGROUP globals.  W = written by G8 code, R = read only.
+# NOTE: seg 0c9b (G7) addresses many of these through CS: cs:X == DS:(X-0x57e0)  (e.g. cs:77a2 = 0x1fc2, cs:7a64 = 0x2284, cs:8518 = 0x2d38, cs:8c86 = 0x34a6)
+0x0096  s16  pending-restore flag: main loop runs sub_07fe_035d/1341/sub_07fe_0231 then clears it (W=0)
+0x00a0  s16  current scene id (-1 = exterior 3D view, 3/4/8 = scenes with sky rooms) R
+0x00a2  s16  requested next scene (-1 = stay in exterior; 99 = overlay scene on exterior snapshot; 10..19 remapped via 0x226c) W
+0x00ce  s16  current room inside scene (sky gradient only in some rooms) R
+0x00d0  s16  room to enter (W=0x1f on countdown expiry)
+0x00d2  u8   minimum palette brightness (0..16) R, W=0 in 13e2
+0x00e6  s16  display/window mode 0,1,2 (selects blitter in 0d96) R
+0x00ec  s16  386-CPU flag (use 32-bit blit/fill variants) R
+0x011a  struct actor[0] = player (0x46-byte actor records, 10 of them to 0x2ce); +0 screen x (W=0xa0), +2 screen y (0x11c, W=0xab), +6/+8 world x/y, +0x2a hit points (decremented via sub_0791_0638(DSADDR(0x11a),1))
+0x011c  s16  player screen y (W=0xab)
+0x012c  s16  HUD/redraw request flag (W=1)
+0x0bb0  s16  quest state (==3 on island 3 removes tile #20 objects) R
+0x1002  s16  compass shown when >=2 R
+0x11bc  s16  special-teleport index into 0x2244 (-1 = none) RW
+0x11c0  s16  countdown mode active (==1) R
+0x11c2  s16  flag -> sub_0936_0e23 each frame R
+0x17e2  s16  flag -> sub_0dc5_01c5 then cleared RW
+0x189c  fptr(DSPTR) -> "RESID.PAK" name R
+0x18a0  fptr(DSPTR) -> "A00.PAK" scene pak name (digits patched to 99 by sub_0053_0925) R
+0x1fc0  s16  sector currently loaded in bank (-1 = none) RW
+0x1fc2  s16  player/camera world x (0..0x4000, tile = 0x200, sector = 0x1000) RW
+0x1fc4  s16  player/camera world y RW
+0x1fc6  s16  camera height z (09af inc/dec around sprite pass; 154d sets 0x3a/0 around intro) RW
+0x1fc8  s16  eye height above ground (8; 8+random while shaking) W
+0x1fca  s8   move direction 1/0/-1 (W=0xff in 13a1)
+0x1fcb  u8   view key: bits0-2 heading octant, bit3 x&0x100, bit4 y&0x100, bits6-7 quadrant R
+0x1fcc  u8   last view key (W=0xff forces cell rebuild)
+0x1fcd  s8   heading angle (256 = full turn) RW
+0x1fd2  s16  day/night phase 0..8 RW
+0x1fd4  s16  step inside phase 0..count RW
+0x1fd6  s16  current island/zone 0..4 RW
+0x1fd8  s16  zone whose actors are initialised (written by sub_0c05_0511) R
+0x1fda  s16  current sector = x/0x1000 + (y/0x1000)*4 W
+0x1fdc  s32  game time counter RW
+0x1fe2  s16  scene exit code / last scene id RW
+0x1fe4  s16  keep-position-on-return flag RW
+0x1fe6  s16  countdown value (displayed at 10,20) RW
+0x1fe8  s16  screen-shake frames remaining RW
+0x1fea  s16  screen-shake amplitude (random range) R
+0x1ffa  array[7]xchar "i0.dat" island map file name; 0x1ffb digit W
+0x2010  array[15]xu8  initial sky colors (5 RGB) R
+0x201f  array[4][4]xs8  neighbour-cell flag rows (1:+x 2:-x 4:+y 8:-y) R
+0x202f  array[32]xs8  view key&0x1f -> row of 0x201f R
+0x204f  array[10][16]xu8  day/night phases: 5 sky RGB colors + step count (byte 15) R
+0x20ef  array[10]xu8  palette brightness per phase (/16) R
+0x20f9  array[5][18]xu8  per-island ground colors (6 RGB -> palette 186..191) R
+0x2153  array[5][16]xu8  per-island sector -> "iN.PAK" entry R
+0x21a4  array[20][8] door records {s16 zone, s16 x, s16 y, u8 heading, u8 pad} indexed by scene exit code R
+0x2244  array[4][8]  special teleport records (same layout) indexed by 0x11bc R
+0x226c  array[10]xu8  scene code 10..19 -> scene id (accessed as [code+0x2262]) R
+0x2276  array[10]xu8  scene code 10..19 -> DS16(0x329e) (accessed as [code+0x226c]) R
+0x2284  s16  point/vertex count for 3D pipeline (shared with 0c9b cs:7a64) RW
+0x2286  s16  bump-back request (set by sub_0c05_0400) RW
+0x2288  array[3]xchar "i0" sector pak base name; 0x2289 digit W
+0x228c  array[3][4]xs16 ground-triangle points {x,y,z,flag}: W 0x228c,0x228e (pt0 x,y), 0x2290 (pt0 z), 0x2298 (pt1 z), 0x22a0 (pt2 z)
+0x2d38  fptr(DSPTR) back/draw buffer R
+0x2d3c  fptr(DSPTR) VGA screen (seg 0x2d3e=0xa000) R
+0x2d4e  u8   last key scancode (1=Esc, 0x1c=Enter) R
+0x3032  fptr(DSPTR) working palette 0x300 (uploaded) R
+0x303c  s16  view clip top (W=0)
+0x304c  fptr(DSPTR) base palette 0x300 R
+0x3054  s16  view clip bottom+1 (W=0xac)
+0x3262  fptr(DSPTR) sprite set from RESID#2 (FP(res+0)) W
+0x3266  s16  flag -> sub_02a7_127c each frame R
+0x327a  s16  flag -> sub_0936_0d18 each frame R
+0x329e  s16  scene sub-entry / room parameter W
+0x3492  fptr(DSPTR) sector data = DSPTR(0x3498)+0x294 (header: +4 s32 sprite tbl off, +8 s32 anim tbl off, +0xc u16 scaled-data off) RW
+0x3496  s16  moving-actor count (W=0 per frame, incremented by sub_0c9b_0861) RW
+0x3498  fptr(DSPTR) sector sprite bank 0x38270 bytes: +0 s32[10][16] offsets, +0x280 {u8 halfw,u8 h}[10], +0x294 file W(contents)
+0x349c  s16  min top y of drawn scenery sprites (reset 100 per frame) W
+0x349e  fptr(DSPTR) actor list 0x50 (10 x 8 bytes) W(alloc)
+0x34a2  fptr(DSPTR) island map 32x32 x {u8 tile type, u8 attr} (0x800) W(alloc)
+0x34a6  fptr(DSPTR) point work buffer 0x400 (4 words/point: x,depth/y,z,flags) W(alloc)
+0x34aa  fptr(DSPTR) 4 terrain cells x 0x400 (see notes) W(alloc)
+0x34ae  fptr(DSPTR) transformed point buffer 0x400 W(alloc)
+0x34b2  fptr(DSPTR) tile geometry data 0x1f40 W(alloc)
+0x34b6  s16  all 4 cells are sea (skip ground triangles) R
+0x34b8  s16  horizon screen y R
+0x34ba  fptr(DSPTR) end of tile geometry data W (not read anywhere)
+0x34be  fptr(DSPTR) RESID.PAK entry 2 resource buffer W
+0x34c2  fptr(DSPTR) 64000-byte exterior snapshot W
+0x34c6  fptr(DSPTR) compass sprite set (FP(res+4)) W
+0x34ca  fptr(DSPTR) tile type -> geometry offset table (u16[512], 0x400) W(alloc)
